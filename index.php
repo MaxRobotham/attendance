@@ -33,7 +33,7 @@
 
   <div class ="form-group">
     <label for="specialty">Area of Expertise</label>
-    <select class="form-control" id="specialty">
+    <select class="form-control" id="specialty" name="specialty">
       <option>Database Admin</option>
       <option>Software Developer</option>
       <option>web administrator</option>
