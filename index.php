@@ -15,7 +15,7 @@
 
 <h1 class = "text-center">Registration for  IT Conference</h1>
 
-<form method = "get" action ="success.php">
+<form method = "post" action ="success.php">
   <div class="form-group">
     <label for="firstname">First Name</label>
     <input type="text" class="form-control" id="firstname" name="firstname">
