@@ -1,7 +1,7 @@
 <?php
     
     $title = 'success';
-    require 'includes/header.php';
+    require_once 'includes/header.php';
     require_once 'db/conn.php';
 
     if(isset($_POST['submit'])){
@@ -14,7 +14,7 @@
         $specialty =  $_POST['specialty'];
         
         //call function to insert and track if success or not
-        $isSuccess = $crud->insert($fname, $lname, $dob, $email, $contact, $specialty);
+        $isSuccess = $crud->insertAttendees($fname, $lname, $dob, $email, $contact, $specialty);
 
         if($isSuccess){
             echo '<h1 class ="text-center text-success"> You Have Been Registered</h1>';
@@ -94,4 +94,4 @@
 <br>
 <br>
 <br>
-<?php require 'includes/footer.php';?> 
+<?php require_once 'includes/footer.php';?> 
