@@ -10,9 +10,13 @@
 
     try{
         $pdo = new PDO($dsn, $user, $pass);
-        echo 'hello Database';
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
     } catch (PDOException $e) {
         throw new PDOException($e->getMessage());
         //echo "<h1 class='text-danger'> No Database Found </h1>";
     }
+
+    require_once 'crud.php';
+    $crud = new crud($pdo);
 ?>
