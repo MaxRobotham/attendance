@@ -14,14 +14,16 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
+
+     
         $( function() {
             $( "#dob" ).datepicker( {
                 changeMonth: true,
-                changeYear: true
+                changeYear: true,
                 yearRange: "-100:+0",
                 dateFormat: "yy-mm-dd" //limit the range of years thats available for selection from calender control
-              });
-          });
+            });
+        });
     </script>
 </body>
 </html>
