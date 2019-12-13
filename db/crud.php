@@ -41,11 +41,22 @@
             return $result;
 
         }
+        public function getAttendeeDetails($id){
+            $sql = "SELECT * FROM attendee a inner join specialties s on a.specialty_id = s.specialty_id where attendee_id = :id";
+            $stmt = $this->db->prepare($sql);
+            $stmt->bindparam(':id', $id);
+            $stmt-> execute();
+            $result = $stmt->fetch();
+            return $result;
+
+        }
 
         public function getSpecialties(){
             $sql = "SELECT * FROM `specialties`";
             $result = $this->db->query($sql);
             return $result;
         }
+
+        
     }
 ?>
