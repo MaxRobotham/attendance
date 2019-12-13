@@ -8,18 +8,19 @@
     
     if(!isset($_GET['id']))
     {
-        echo 'error';
+        //echo 'error';
+        include 'includes/errormessage.php';
+        header('Location: viewrecords.php');
     }else {
         $id = $_GET['id'];
         $attendee = $crud->getAttendeeDetails($id);
-    
-
-    
+        
 ?> 
 
 <h1 class = "text-center">Edit record</h1>
 
 <form method = "post" action ="editpost.php">
+        <input type="hidden" name="id" value ="<?php echo $attendee['attendee_id'] ?>" />
   <div class="form-group">
     <label for="firstname">First Name</label>
     <input type="text" class="form-control" value ="<?php echo $attendee['firstname'] ?>" id="firstname" name="firstname">
@@ -68,6 +69,7 @@
   </div>
 
   <button type="submit" name="submit" class="btn btn-success">Save Changes</button>
+  <a href="viewrecords.php" class="btn btn-info">Back to list</a>
 </form>
 
 <?php  }?>
