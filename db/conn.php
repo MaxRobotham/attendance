@@ -1,10 +1,18 @@
 <?php
+  
+  // remote database connection
+  $host = 'remotemysql.com';
+  $db = 'rrSJlJvjEz';
+  $user = 'rrSJlJvjEz';
+  $pass = 'ysmoBbjgVi';
+  $charset = 'utf8mb4';
 
-    $host = 'localhost';
-    $db = 'attendance_db';
-    $user = 'root';
-    $pass = '';
-    $charset = 'utf8mb4';
+        //local dev connection
+    // $host = 'localhost';
+    // $db = 'attendance_db';
+    // $user = 'root';
+    // $pass = '';
+    // $charset = 'utf8mb4';
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 

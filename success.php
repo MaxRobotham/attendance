@@ -83,16 +83,6 @@
 
 </div>
 
-    <!-- <?php//
-        //echo $_GET['firstname'];
-        //echo $_GET['lastname'];
-        //echo $_GET['dob'];
-        //echo $_GET['specialty'];
-        //echo $_GET['email'];
-        //echo $_GET['phone'];
-
-    ?> -->
-
 <br>
 <br>
 <br>
