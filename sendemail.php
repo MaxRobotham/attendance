@@ -2,9 +2,9 @@
     require 'vendor/autoload.php';
     class SendEmail{
         public static function SendMail($to,$subject,$content){
-            $key = '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';
+            $key = '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';
             $email = new \SendGrid\Mail\Mail();
-            $email->setFrom("trevoir.williams@gmail.com", "Trevoir Williams");
+            $email->setFrom("m_robotham@hotmail.com", "Max Robotham");
             $email->setSubject($subject);
             $email->addTo($to);
             $email->addContent("text/plain", $content);
